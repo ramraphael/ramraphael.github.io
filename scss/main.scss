@@ -1,0 +1,230 @@
+@import "config";
+@import "responsive";
+@import "menu";
+
+* {
+    color: $black;
+    font-family: $main-font-family;
+}
+
+.fadein {
+    animation-name: fadein;
+    animation-duration: 1000ms;
+} 
+
+.section {            
+    margin: 2% auto 0 auto;            
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+.red {
+    color: $primary-color;
+}
+
+a {
+    color: inherit;                        
+    font-weight: inherit;
+    font-family: inherit;
+    border-bottom: 1.5px solid $primary-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lighten(#333, 10);            
+    border-bottom: 3px solid lighten($primary-color, 5);
+}
+
+.cta {
+    z-index:2;
+    display: flex;         
+    margin: 4rem auto;
+    text-align: center;
+    
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+        cursor: pointer;
+        margin-right: 1.5rem;
+        border-radius: 1px;
+        height: auto;                
+        font-family: $secondary-font-family;                
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+        text-shadow: 0px 1px 1px darken($primary-color,2);
+        text-transform: uppercase;        
+        border: none;
+
+        &:hover {
+            color: white;            
+            text-decoration: none;
+            border-bottom: none;
+        }
+    }   
+    
+    .linkedin {
+        background-color: #007AB6;
+        color: $white;   
+        flex: 1;                
+    }
+
+    .email {
+        background-color: $primary-color;
+        color: $white;
+        flex: 1;
+    }
+}
+
+.home {
+    @include easeOut();
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;  
+    align-items: center;          
+    text-align: center;    
+    color: $black;             
+                        
+    &__name {
+        font-weight: lighter;                   
+        &.red {
+            color: $primary-color;
+        }   
+    }                              
+    
+    &__elevatorpitch {
+        font-weight: lighter;        
+        .black {
+            color: $black;                                        
+        }
+    }
+}
+
+.work {       
+    @include easeOut();                 
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+    
+.project-grid {
+    margin-top: 2rem;        
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 4rem;
+}        
+
+.project {
+    grid-column: span 1;
+    grid-column-gap: 1rem;            
+    grid-template-columns: 6fr 5fr;  
+    
+    a {
+        border-bottom: none;
+    }
+
+    a .project__image {
+        grid-column: 1 / 2;
+        width: 100%;
+        box-shadow: 0px 3px 10px rgba($black,0.5);
+        width: 90%;                             
+
+        &.monitor {
+            box-shadow: none;
+            -webkit-filter: drop-shadow(0px 3px 10px rgba($black,0.5));
+            filter: drop-shadow(0px 3px 10px rgba($black,0.5));
+
+            &:hover {
+                box-shadow: none;
+                border: none;
+                -webkit-filter: drop-shadow(0px 6px 10px rgba($black,0.5));
+                filter: drop-shadow(0px 6px 10px rgba($black,0.5));    
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 6px 10px rgba($black,0.5);
+            border: 1px solid rgba($black,0.25);
+        }
+    }
+
+    &__copy {
+        justify-self: start;
+        align-self: start;
+        grid-column: 2 / 3;
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 1.75rem;
+        margin-top: 0;
+        margin-bottom: 0.3rem;                        
+    }
+
+    &__links {                        
+        margin-top: 0.3rem;   
+        margin-bottom: 0.3rem;                     
+    }
+    
+    &__links a {                             
+        font-family: $secondary-font-family;
+        font-weight: 300;
+        margin-right: 0.5rem;                        
+        color: inherit;                        
+        border-bottom: 1.5px solid $primary-color;
+        text-decoration: none;          
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__languages {
+        font-size: 1rem;
+        font-family: $secondary-font-family;
+        color: lighten(rgba($primary-color, 0.90), 1);
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-weight: 400;                        
+        margin-top: 0.75rem;
+        margin-bottom: 1.5rem;
+    }      
+    
+    &__description {
+        font-family: $secondary-font-family;
+        font-size: 1.2rem;
+        font-weight: 350;
+    }
+}
+
+.about {
+    @include easeOut();
+    display: flex;
+    flex-direction: column;    
+
+    &__greeting {
+        margin-right: 0.75rem;                
+    }
+    
+    &__description {
+        font-family: $secondary-font-family;
+        font-weight: 300;
+        line-height: 2;
+        font-size: 1.5rem;
+    }
+
+    iframe {
+        font-size: 1rem;                
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "raphael-portfolio-1",
+  "version": "1.0.0",
+  "description": "Raphael's digital portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Raphael Ram",
+  "license": "GNU GPL v3.0",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  },
+  "devDependencies": {}
+}
