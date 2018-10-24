@@ -8,7 +8,7 @@
     z-index: 2;    
     
     &:after {                
-        z-index: -1;
+        z-index: 1;
         position: absolute;
         content: '';                        
         left:0;
@@ -24,18 +24,13 @@
     &.opened {                 
         transition: transform 0.5s ease-in-out;
         transform: translateY(31rem);        
-    }
-
-    &__label:nth-child(4){
-        margin-top: 2rem;
-    }
+    }    
     
     &__label {
         cursor: pointer;                
         margin-top: 2em;   
         margin-bottom: 2rem;                        
-        text-align: center;
-        width: 100%;                
+        text-align: center;        
         font-size: 1.25rem;                
         color: #eee;
         text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.507);                      
@@ -43,7 +38,7 @@
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        padding: 0 0 0 0.2rem;
+        padding: 0 0 0 0.2rem; // Needed to center word with letter spacing
 
         &:hover {                                
             color: #fff;
@@ -53,7 +48,7 @@
 
     &__hamburger {
         z-index: 3;
-        margin-top: 2.3rem;
+        margin-top: 2.1rem;
         margin-bottom: 0.5rem;
         width: 100%;
         text-align: center;                

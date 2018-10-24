@@ -42,8 +42,7 @@ a:hover {
 
 .cta {
     z-index:2;
-    display: flex;         
-    margin: 4rem auto;
+    display: flex;             
     text-align: center;
     
     &__button {
@@ -51,34 +50,36 @@ a:hover {
         justify-content: center;
         align-items: center;
         padding: 1rem 1rem;
-        cursor: pointer;
-        margin-right: 1.5rem;
+        cursor: pointer;        
         border-radius: 1px;
         height: auto;                
         font-family: $secondary-font-family;                
         font-weight: bold;
         letter-spacing: 0.1rem;
         font-size: 1.4rem;
+        color: $white;
         text-shadow: 0px 1px 1px darken($primary-color,2);
         text-transform: uppercase;        
         border: none;
 
-        &:hover {
-            color: white;            
+        &:hover {            
             text-decoration: none;
             border-bottom: none;
+            color: white;
+        }
+
+        &:nth-child(1){
+            margin-right: 1.5rem;
         }
     }   
     
     .linkedin {
         background-color: #007AB6;
-        color: $white;   
-        flex: 1;                
+        flex: 1;
     }
 
     .email {
-        background-color: $primary-color;
-        color: $white;
+        background-color: $primary-color;        
         flex: 1;
     }
 }
@@ -108,8 +109,7 @@ a:hover {
     }
 }
 
-.work {       
-    @include easeOut();                 
+.work {           
     display: flex;        
     flex-direction: column;
     justify-content: center;
@@ -127,17 +127,20 @@ a:hover {
 .project {
     grid-column: span 1;
     grid-column-gap: 1rem;            
-    grid-template-columns: 6fr 5fr;  
+    grid-template-columns: 6fr 5fr;      
     
     a {
         border-bottom: none;
     }
 
     a .project__image {
-        grid-column: 1 / 2;
-        width: 100%;
+        grid-column: 1 / 2;        
         box-shadow: 0px 3px 10px rgba($black,0.5);
         width: 90%;                             
+
+        &:hover {
+            box-shadow: 0px 6px 10px rgba($black,0.5);            
+        }
 
         &.monitor {
             box-shadow: none;
@@ -150,11 +153,6 @@ a:hover {
                 -webkit-filter: drop-shadow(0px 6px 10px rgba($black,0.5));
                 filter: drop-shadow(0px 6px 10px rgba($black,0.5));    
             }
-        }
-
-        &:hover {
-            box-shadow: 0px 6px 10px rgba($black,0.5);
-            border: 1px solid rgba($black,0.25);
         }
     }
 
@@ -172,9 +170,8 @@ a:hover {
         margin-bottom: 0.3rem;                        
     }
 
-    &__links {                        
-        margin-top: 0.3rem;   
-        margin-bottom: 0.3rem;                     
+    &__links {                                
+        margin: 0.3rem auto;
     }
     
     &__links a {                             
@@ -204,7 +201,7 @@ a:hover {
     &__description {
         font-family: $secondary-font-family;
         font-size: 1.2rem;
-        font-weight: 350;
+        font-weight: 350;        
     }
 }
 
@@ -222,9 +219,5 @@ a:hover {
         font-weight: 300;
         line-height: 2;
         font-size: 1.5rem;
-    }
-
-    iframe {
-        font-size: 1rem;                
     }
 }

@@ -21,15 +21,15 @@
     font-size: 70%; }
   .section {
     margin: 2% auto 0 0; }
+  .cta {
+    margin: 3rem auto 4rem auto; }
   .home__name {
     line-height: 1.5;
     margin-bottom: 0;
     font-size: 5rem; }
   .home__elevatorpitch {
     line-height: 1.5;
-    font-size: 3rem; }
-  .home__first {
-    display: block; }
+    font-size: 2.25rem; }
   .navribbon {
     right: 0.5rem;
     padding: 0rem;
@@ -48,19 +48,23 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 2rem; }
+    padding-bottom: 3rem; }
+    .project:nth-last-child(1) {
+      padding-bottom: 0; }
   .project__image {
     margin-bottom: 1.5rem; } }
 
 @media (min-width: 500px) {
   html {
     font-size: 110%; }
+  .cta {
+    margin: 4rem auto; }
   .navribbon {
     right: 4rem;
     width: 4.5rem;
     padding: 1rem; }
     .navribbon:after {
-      top: 24rem;
+      top: 25rem;
       border: 3.2rem solid #c73800; }
     .navribbon__label, .navribbon .navribbon__hamburger__label {
       font-size: 1.25rem; }
@@ -88,7 +92,7 @@
   background: #c73800;
   z-index: 2; }
   .navribbon:after {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     content: '';
     left: 0;
@@ -100,14 +104,11 @@
   .navribbon.opened {
     transition: transform 0.5s ease-in-out;
     transform: translateY(31rem); }
-  .navribbon__label:nth-child(4) {
-    margin-top: 2rem; }
   .navribbon__label {
     cursor: pointer;
     margin-top: 2em;
     margin-bottom: 2rem;
     text-align: center;
-    width: 100%;
     font-size: 1.25rem;
     color: #eee;
     text-shadow: 0px 1px 1px rgba(51, 51, 51, 0.507);
@@ -121,7 +122,7 @@
       text-shadow: none; }
   .navribbon__hamburger {
     z-index: 3;
-    margin-top: 2.3rem;
+    margin-top: 2.1rem;
     margin-bottom: 0.5rem;
     width: 100%;
     text-align: center;
@@ -196,7 +197,6 @@ a:hover {
 .cta {
   z-index: 2;
   display: flex;
-  margin: 4rem auto;
   text-align: center; }
   .cta__button {
     display: flex;
@@ -204,27 +204,27 @@ a:hover {
     align-items: center;
     padding: 1rem 1rem;
     cursor: pointer;
-    margin-right: 1.5rem;
     border-radius: 1px;
     height: auto;
     font-family: "Source Sans Pro";
     font-weight: bold;
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
+    color: #eaeaea;
     text-shadow: 0px 1px 1px #bd3500;
     text-transform: uppercase;
     border: none; }
     .cta__button:hover {
-      color: white;
       text-decoration: none;
-      border-bottom: none; }
+      border-bottom: none;
+      color: white; }
+    .cta__button:nth-child(1) {
+      margin-right: 1.5rem; }
   .cta .linkedin {
     background-color: #007AB6;
-    color: #eaeaea;
     flex: 1; }
   .cta .email {
     background-color: #c73800;
-    color: #eaeaea;
     flex: 1; }
 
 .home {
@@ -246,7 +246,6 @@ a:hover {
       color: #333; }
 
 .work {
-  transition: all 0.4s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,9 +266,10 @@ a:hover {
     border-bottom: none; }
   .project a .project__image {
     grid-column: 1 / 2;
-    width: 100%;
     box-shadow: 0px 3px 10px rgba(51, 51, 51, 0.5);
     width: 90%; }
+    .project a .project__image:hover {
+      box-shadow: 0px 6px 10px rgba(51, 51, 51, 0.5); }
     .project a .project__image.monitor {
       box-shadow: none;
       -webkit-filter: drop-shadow(0px 3px 10px rgba(51, 51, 51, 0.5));
@@ -279,9 +279,6 @@ a:hover {
         border: none;
         -webkit-filter: drop-shadow(0px 6px 10px rgba(51, 51, 51, 0.5));
         filter: drop-shadow(0px 6px 10px rgba(51, 51, 51, 0.5)); }
-    .project a .project__image:hover {
-      box-shadow: 0px 6px 10px rgba(51, 51, 51, 0.5);
-      border: 1px solid rgba(51, 51, 51, 0.25); }
   .project__copy {
     justify-self: start;
     align-self: start;
@@ -293,8 +290,7 @@ a:hover {
     margin-top: 0;
     margin-bottom: 0.3rem; }
   .project__links {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem; }
+    margin: 0.3rem auto; }
   .project__links a {
     font-family: "Source Sans Pro";
     font-weight: 300;
@@ -329,5 +325,3 @@ a:hover {
     font-weight: 300;
     line-height: 2;
     font-size: 1.5rem; }
-  .about iframe {
-    font-size: 1rem; }

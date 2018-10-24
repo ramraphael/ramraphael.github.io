@@ -23,7 +23,7 @@ const secondLoad = document.querySelectorAll(".home__second");
 // Hides screens and underlines home menu entry
 workScreen.style.display = "none";
 aboutScreen.style.display = "none";
-homeButton.style.textDecoration = "underline";
+homeButton.style.borderBottom = "2px solid white";
 
 // Slight delay so navribbon slides in after home screen
 setTimeout(
@@ -56,10 +56,10 @@ function showSection(screen, button){
         }
         for(let i of allButtons){
             if (i!==button){
-                i.style.textDecoration = "none";
+                i.style.borderBottom = "none";
             }
         }
-        button.style.textDecoration = "underline";
+        button.style.borderBottom = "2px solid white";
         screen.style.display = "flex";        
     }    
     toggleNavRibbon();
