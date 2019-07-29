@@ -2,10 +2,10 @@ import React from 'react';
 
 const About = props => (
   <div className="about section fadein">
-    <h1 className="section__heading">{title}</h1>
+    <h1 className="section__heading">About</h1>
 
     <p className="about__description">
-      {greetings.map(greeting => (<span className="about__greeting">{greeting}</span>))}
+      {[`မင်္ဂလာပါ.`, `வனக்கம்.`, `Hello.`].map(greeting => (<span className="about__greeting">{greeting}</span>))}
     </p>
 
     <p className="about__description">
