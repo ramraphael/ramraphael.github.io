@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 const Home = props => (
-  <div className="home fadein">
+  <div className="home fadein" style={{margin: 0, padding: 0}}>
     <h1 className="home__name">
       <span className="red">Raphael </span>Ram
     </h1>

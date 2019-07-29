@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import projectData from '../data/ProjectData';
 import Project from '../components/Projects/Project';
 

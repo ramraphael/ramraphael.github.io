@@ -28,7 +28,7 @@ export default {
     title: 'JSparring',
     liveLink: '',
     sourceLink: 'https://github.com/jsparring',
-    technologies: ['React', 'Redux', 'Node', 'Express', 'PostgreSQL', 'Jasmine', 'Websockets', 'AWS', 'RDS'],
+    technologies: ['React', 'Redux', 'Node', 'Express', 'Postgres', 'Jasmine', 'Websockets', 'AWS', 'RDS'],
     description: `Realtime, multiplayer, competitive coding platform. Designed 
     using a microservices architecture. To be published soon!`
   },

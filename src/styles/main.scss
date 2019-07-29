@@ -7,6 +7,12 @@
     font-family: $main-font-family;
 }
 
+html, body, main {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
 .fadein {
     animation-name: fadein;
     animation-duration: 1000ms;
@@ -87,7 +93,7 @@ a:hover {
     @include easeOut();
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;  
     align-items: center;          
     text-align: center;    
