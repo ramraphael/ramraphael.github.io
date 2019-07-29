@@ -21,14 +21,15 @@ export default {
     sourceLink: 'https://github.com/ribbitjs/ribbit',
     technologies: ['Node', 'NPM', 'JavaScript', 'Webpack', 'React (SSR)', 'Redux'],
     description: `CLI tool for universal serverside rendering of React applications.
-    Generate static files for any serverside framework and language.`
+    Generate static files for any serverside framework and language. Give your low-
+    bandwidth users an accessibility boost.`
   },
   jsparring: {
     title: 'JSparring',
     liveLink: '',
     sourceLink: 'https://github.com/jsparring',
     technologies: ['React', 'Redux', 'Node', 'Express', 'PostgreSQL', 'Jasmine', 'Websockets', 'AWS', 'RDS'],
-    description: `Realtime, multiplayer, competitive coding platform. 
-    Built using a microservices architecture.`
+    description: `Realtime, multiplayer, competitive coding platform. Designed 
+    using a microservices architecture. To be published soon!`
   },
 };
