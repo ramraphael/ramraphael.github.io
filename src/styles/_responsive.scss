@@ -1,0 +1,117 @@
+@media(min-width: 200px) and (max-width: 499px){
+    html {
+        font-size: 70%;
+    }
+
+    .section {
+        margin: 2% auto 0 0;            
+    }
+
+    .cta {
+        margin: 3rem auto 4rem auto;
+    }
+
+    .home {        
+        &__name{
+            line-height: 1.5;
+            margin-bottom: 0;
+            font-size: 5rem;            
+        }        
+
+        &__elevatorpitch {
+            line-height: 1.5;
+            font-size: 2.25rem;
+        }
+    }
+
+    .navribbon {
+        right: 0.5rem;
+        padding: 0rem;
+        width: 5.5rem;
+
+        &:after {
+            border: 2.7rem solid $primary-color;            
+            top: 23em;
+        }        
+    }
+
+    .about {
+        width: 60%;
+    }
+
+    .work {
+        width: 60%;                
+        margin-left: auto;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 3rem;
+
+        &:nth-last-child(1){
+            padding-bottom: 0;
+        }
+    }
+
+    .project__image {
+        margin-bottom: 1.5rem;
+    }
+    
+}
+
+@media(min-width: 500px){
+    html {
+        font-size: 110%;
+    }
+
+    .cta {
+        margin: 4rem auto;
+    }
+
+    .navribbon {
+        right: 4rem;
+        width: 4.5rem;
+        padding: 1rem;        
+
+        &:after {
+            top: 25rem;
+            border: 3.2rem solid $primary-color;
+        }
+
+        &__label, .navribbon__hamburger__label {
+            font-size: 1.25rem;
+        }
+        
+    }
+
+    .home {        
+        &__name {
+            font-size: 8rem;
+            line-height: 0.5;
+        }        
+        &__elevatorpitch {
+            font-size: 4rem;
+            line-height: 0.5;
+        }
+    }
+
+    .work {
+        width: 70%;
+    }
+
+    .project-grid {
+        display: grid;
+    }
+
+    .project {
+        display: grid;
+    }
+
+    .about {
+        width: 50%;
+    }
+}
